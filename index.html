@@ -31,45 +31,47 @@ class: center, middle, inverse, title-slide
 
 
 
+
 # Overview
-- Utilities play a key role in ensuring reliable, high-quality electricity service.
+- Electric utilities are essential to expanding and maintaining reliable electricity access.
 
-- Asset growth serves as proxy for improvements in infrastructure, access, and service quality.
+- Asset growth reflects infrastructure expansion and improved service capacity.
 
-- This analysis explores whether cost recovery helps explain asset growth.
+- This analysis tests whether utilities that recover their costs are better positioned to grow their assets.
 
-- I begin by showing how many utilities recover their costs and how many do not.I then examine asset growth by cost recovery levels and test the relationship using regression.
-
-- Results show cost recovery has limited explanatory power for asset growth — other factors likely matter more.
-
+- I begin with descriptive statistics, then test the cost recovery–growth link using regression.
+	
 ---
 # Description of the dataset
-- There are 185 unique utilities and 93 unique countries in the dataset.
-- Most power utilities in the sample are in the lower and upper middle income groups, with fewer in low or high income countries.
-- I look at Average Cost Recovery (for period 2012-2022) and Annual Asset Growth Rate (for the same period) across these utilities.
+- 185 utilities across 93 countries.
 
-&lt;img src="slides_edgar_files/figure-html/bar-chart-utilities-1.svg" style="display: block; margin: auto;" /&gt;
+- Majority are from lower- and upper-middle income countries.
 
+- Two indicators are central to this analysis:
+    - Average Cost Recovery (ACR): 2012–2022
+    - Total Asset Growth Rate (TAGR): Annualized over 2012–2022
+	
+---
+# Distribution of cost recovery
+- Wide variation in cost recovery.
+
+- 116 utilities fall below the 100% benchmark (shown in red dashed line).
+
+- 69 utilities exceed 100% recovery.
+&lt;img src="slides_edgar_files/figure-html/cost-recovery-histogram-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
-# Cost recovery across utilities
-- Only 69 (37%) of 189 utilities recover both operational and debt-related costs.
-- On average, utilities in high- and upper-middle-income countries achieve cost recovery, while those in low- and lower-middle-income countries fall short.
+# Asset growth vs. cost recovery
+- The scatterplot shows a weak and slightly negative relationship between cost recovery and asset growth.
 
+- Regression analysis confirms that cost recovery is not a statistically significant predictor of asset growth (p = 0.22).
+
+- This suggests that higher cost recovery alone is not sufficient to guarantee infrastructure expansion.
 .pull-left[
-&lt;img src="slides_edgar_files/figure-html/pie-chart-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_edgar_files/figure-html/scatter-plot-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 .pull-right[
-&lt;img src="slides_edgar_files/figure-html/box-plot-cost-1.svg" style="display: block; margin: auto;" /&gt;
-]
----
-# Cost recovery and utility's asset growth
-- Average Cost Recovery is not a significant predictor of Total Assets Growth Rate (p = 0.225); the model explains very little variation (R² = 0.008).
-- Other factors beyond cost recovery may better explain asset growth.
-- For example, access to external financing, government support, or capital investment programs could drive asset expansion regardless of cost recovery performance.
-
-.pull-left[
-&lt;table class="table" style="font-size: 10px; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;table class="table" style="font-size: 10px; color: black; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
 &lt;caption style="font-size: initial !important;"&gt;Regression Results: Total Assets Growth Rate on Average Cost Recovery&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -99,11 +101,23 @@ class: center, middle, inverse, title-slide
 &lt;/table&gt;
 ]
 
+---
+# Cost Recovery by Income Group
+.pull-left[
+- Clear gradient observed: cost recovery is generally lower in low-income countries and higher in upper-middle and high-income countries.
+
+- Variability in cost recovery is largest among lower-middle income utilities.
+
+- These patterns suggest that broader economic and institutional factors, linked to country income levels, influence utilities’ financial performance and investment capacity.
+
+]
+
 .pull-right[
-&lt;img src="slides_edgar_files/figure-html/box-plot-asset-growth-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_edgar_files/figure-html/boxplot-income-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 ---
-# Thanks!
+
+# Thank you!
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
